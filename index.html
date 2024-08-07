@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotBox</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #98FB98 0%, #2E8B57 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #006400;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 0 #32cd32, -2px -2px 0 #32cd32, 2px -2px 0 #32cd32, -2px 2px 0 #32cd32;
+            color: #ffffff;
+        }
+        nav {
+            background-color: #006400;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #32cd32;
+        }
+        .hero {
+            text-align: center;
+            padding: 150px 20px 100px;
+            background: #006400;
+            margin-top: 50px; /* Adjusting for fixed nav */
+            position: relative;
+        }
+        .hero img {
+            width: 300px;
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            background-color: #32cd32;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            position: relative;
+        }
+        .content {
+            padding: 20px;
+        }
+        .warehouse {
+            background-color: #228B22;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            display: none; /* Initially hidden */
+        }
+        .warehouse h2 {
+            color: #ff69b4;
+            text-align: center;
+        }
+        .warehouse ul {
+            list-style: none;
+            padding: 0;
+        }
+        .warehouse li {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        footer {
+            background-color: #006400;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function scrollToWarehouse() {
+            document.getElementById('warehouse').style.display = 'block';
+            document.getElementById('warehouse').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="about.html">About Me</a>
+        <a href="#warehouse" onclick="scrollToWarehouse()">Warehouse</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <header>
+        <h1>HotBox</h1>
+    </header>
+    <div class="hero">
+        <img src="A16752_HotBox_Logo_HG%20(1).jpg" alt="HotBox Logo">
+        <button onclick="scrollToWarehouse()">Get Started</button>
+    </div>
+    <div class="content">
+        <section id="warehouse" class="warehouse">
+            <h2>Warehouse</h2>
+            <p>Here are some of the projects I've been working on:</p>
+            <ul>
+                <li>HB123: Beach Day</li>
+                <li>HB124: Food</li>
+                <li>HB125: Seasonal</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me at: <a href="mailto:mon.poke@example.com">mon.poke@example.com</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Mon Poke</p>
+    </footer>
+</body>
+</html>
